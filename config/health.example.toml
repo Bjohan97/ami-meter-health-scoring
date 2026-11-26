@@ -1,0 +1,48 @@
+# health.example.toml — EXAMPLE settings. Every value is an illustrative default, not a calibrated one.
+
+[weights]            # fusion weights (renormalised over the scores that can be computed)
+availability = 0.35
+peer = 0.20
+stability = 0.15
+voltage = 0.15
+events = 0.15
+
+[scores]
+peer_min_meters = 5
+peer_z_max = 5.0
+peer_scale_min = 0.01
+ewma_lambda = 0.3
+ewma_l = 3.0
+ewma_sigma_min = 0.02
+stability_min_days = 5
+nominal_voltage_v = 220.0
+voltage_band = 0.10
+voltage_min_samples = 24
+voltage_share_zero_score = 0.20
+voltage_dev_zero_score = 0.10
+
+[event_weights]
+tamper_open = 1.0
+comm_loss = 0.02
+voltage_event = 0.05
+clock_sync = 0.01
+power_failure = 0.0
+
+[diagnosis]
+group_issue_median_gap = 0.30
+meter_gap_min = 0.05
+no_data_gap = 0.95
+day_level_share = 0.80
+hardware_entropy_max = 0.60
+power_outage_cover = 0.50
+voltage_score_max = 0.50
+trend_slope_min = 0.02
+trend_rise_min = 0.10
+
+[event_patterns]     # regular expressions on the event description (manufacturer-specific texts)
+TAMPER_OPEN = "(?i)cover.*open"
+TAMPER_CLOSE = "(?i)cover.*clos"
+POWER_FAILURE = "(?i)power (failure|down|outage)"
+COMM_LOSS = "(?i)(communication|plc).*(lost|end|fail)"
+VOLTAGE_EVENT = "(?i)(sag|swell|under ?voltage|over ?voltage)"
+CLOCK_SYNC = "(?i)clock|time sync"

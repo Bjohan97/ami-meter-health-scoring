@@ -1,0 +1,6 @@
+meter_id,ts_local,description
+MTR-0016,2026-01-06 10:00,Terminal cover opened
+MTR-0017,2026-01-06 10:00,Terminal cover opened
+MTR-0017,2026-01-06 10:20,Terminal cover closed
+MTR-0018,2026-01-09 10:00,Long power failure
+MTR-0018,2026-01-10 10:00,Long power failure

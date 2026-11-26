@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ami-meter-health-scoring"
+version = "0.0.1"
+description = "Health scoring and field-inspection prioritisation for AMI smart meters from communication gaps, voltage quality and events."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Brayam Martinez" }]
+requires-python = ">=3.11"
+dependencies = ["pandas>=3.0", "numpy>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5"]
+
+[project.scripts]
+ami-health = "ami_health.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+branch = true
+source = ["ami_health"]
