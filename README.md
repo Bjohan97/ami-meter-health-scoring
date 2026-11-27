@@ -109,7 +109,9 @@ extract, as a plausibility check. Those data and results are not part of this re
 ## Origin of the project
 
 This is an independent reimplementation, redesigned and written from scratch, of a meter-diagnosis tool I
-originally built while working with AMI data at an engineering firm in Peru. It contains no code, data,
+originally built while working with AMI data at an engineering firm in Peru, as an internal tool called
+**"Gemelo Digital"** (digital twin). This version is its diagnostic and prioritisation layer; a physical /
+state model of the meter network (a true digital twin) is future work. It contains no code, data,
 customer names or internal information from that work. Every dataset in the repository is synthetic.
 Developed with AI assistance (Claude), which is credited as co-author in the commits.
 

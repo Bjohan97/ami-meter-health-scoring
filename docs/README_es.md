@@ -3,6 +3,10 @@
 **Objetivo:** decidir **qué medidores visitar primero y por qué**, a partir de los huecos de comunicación,
 la calidad de tensión y los eventos.
 
+**Origen:** es la reimplementación rediseñada de una herramienta interna que desarrollé con el nombre
+**"Gemelo Digital"**. Esta versión es su capa de diagnóstico y priorización; un modelo físico o de estado
+de la red de medición (un gemelo digital en sentido estricto) queda como trabajo futuro.
+
 ## Por qué está diseñado así
 
 - **Scores interpretables y separados de las features de diagnóstico.** La disponibilidad, la comparación
